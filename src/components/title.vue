@@ -1,64 +1,29 @@
-<template>
-  <div id="app">
-    <nav-component></nav-component>
-    <router-view></router-view>
-    <footer-component></footer-component>
-  </div>
+<<template>
+  <div class="about-us-title">
+        <div class="about-us-wrapper">
+            <div class="line-left"></div>
+            <div class="line-center"></div>
+            <div class="line-right"></div>
+            <div class="word">{{thisTransform}}</div>
+        </div>
+        <h2>{{thisTitle}}</h2>
+    </div>
 </template>
 
 <script>
-import './assets/lib/reset.css';
-import './assets/lib/animate.css';
+    export default {
+        name:'title',
+        data(){
+            return{
 
-import NavComponent from './components/nav.vue';
-import FooterComponent from './components/footer.vue'
-
-export default {
-  name: 'app',
-  data() {
-    return {
-
+            }
+        },
+        props:['thisTitle','thisTransform']
     }
-  },
-  methods: {
-
-  },
-  components: {
-    NavComponent,
-    FooterComponent
-  }
-}
 </script>
 
 <style lang="scss">
-@import './assets/scss/common.scss';
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-ul,
-li {
-  list-style: none;
-}
-
-html {
-  width: $w;
-  height: $w;
-  overflow-x: hidden;
-  overflow-y: scroll;
-  font-family: "Microsoft YaHei";
-}
-
-body {
-  @include area($w, $w);
-  .main {
-    width: $w;
-    background-color: $f;
-  }
-}
-
+@import '../assets/scss/common.scss';
 .about-us-title {
   width: 220px;
   height: 70px;
@@ -114,3 +79,4 @@ body {
   }
 }
 </style>
+

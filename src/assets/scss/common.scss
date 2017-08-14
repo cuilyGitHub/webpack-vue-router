@@ -1,0 +1,65 @@
+$w:100%;
+$f:#ffffff;
+$mw:1200px;
+$b:3px solid #999999;
+@mixin area ($w, $h) {
+    width: $w;
+    height: $h;
+}
+
+@mixin background($url) {
+    background: url($url) no-repeat left;
+}
+
+@mixin backSize($s) {
+    background-size: $s;
+}
+
+@mixin middleWrapper() {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+@mixin opcityBack($o) {
+    filter: alpha(opacity=$o * 10);
+    -moz-opacity: $o / 10;
+    -khtml-opacity: $o / 10;
+}
+
+a {
+    text-decoration: none;
+}
+
+table {
+    border-collapse: collapse;
+    /* 边框合并属性  */
+    // width:200px;
+}
+
+th {
+    border: 1px solid #666666;
+}
+
+td {
+    border: 1px solid #666666;
+    padding: 24px;
+}
+
+ul.bankIcon li {
+    width: 124px;
+    padding: 10px 10px;
+    float: left;
+}
+
+body,
+div,
+a,
+ul,
+li,
+h1,
+table {
+    padding: 0;
+    margin: 0;
+    font-size: 12px;
+    color: #555;
+}
