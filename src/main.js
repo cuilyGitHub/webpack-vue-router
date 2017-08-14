@@ -9,6 +9,9 @@ import $ from "jquery";
 
 import "./assets/lib/jquery.nicescroll.min.js"
 
+import "./assets/lib/swiper-3.4.1.min.css";
+import Swiper from "./assets/lib/swiper-3.4.1.jquery.min.js";
+
 Vue.config.productionTip = false;
 
 $("html").niceScroll({
@@ -25,5 +28,14 @@ var vm = new Vue({
     },
     watch: {
         '$route' (to, from) {}
+    },
+    created() {
+        new Swiper('#phone-swiper', {
+            loop: true,
+            speed: 100,
+            autoplay: 500,
+            noSwiping: true,
+            simulateTouch: false,
+        });
     }
 })

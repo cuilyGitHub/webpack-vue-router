@@ -10,6 +10,11 @@
 import './assets/lib/reset.css';
 import './assets/lib/animate.css';
 
+import $ from 'jquery';
+
+import "./assets/lib/swiper-3.4.1.min.css";
+import "./assets/lib/swiper-3.4.1.jquery.min.js";
+
 import NavComponent from './components/nav.vue';
 import FooterComponent from './components/footer.vue'
 
@@ -26,6 +31,15 @@ export default {
   components: {
     NavComponent,
     FooterComponent
+  },
+  created() {
+    let mySwiper = new Swiper('.phone-swiper .swiper-container', {
+      loop: true,
+      speed: 100,
+      autoplay: 500,
+      noSwiping: true,
+      simulateTouch: false,
+    });
   }
 }
 </script>

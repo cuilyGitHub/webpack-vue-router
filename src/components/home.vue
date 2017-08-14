@@ -9,7 +9,7 @@
                     <img src="../assets/images/reliable.png" alt="">
                 </h3>
                 <download></download>
-                <div class="phone-swiper">
+                <div class="phone-swiper" id="phone-swiper">
                     <div class="swiper-container">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide swiper-no-swiping">
@@ -103,9 +103,6 @@
 <script>
 import Download from "../components/download.vue";
 
-import "../assets/lib/swiper-3.4.1.min.css";
-import "../assets/lib/swiper-3.4.1.jquery.min.js";
-
 let hoverCss = {
     "border": "2px solid #f8f8f8",
     "color": "#0288d1"
@@ -114,13 +111,6 @@ let outHoverCss = {
     "border": "none",
     "color": "#333333"
 };
-let mySwiper = new Swiper('.phone-swiper .swiper-container', {
-    loop: true,
-    speed: 100,
-    autoplay: 500,
-    noSwiping: true,
-    simulateTouch: false,
-});
 export default {
     name: 'home',
     data() {
