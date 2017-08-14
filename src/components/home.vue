@@ -36,7 +36,8 @@
                     <div class="item" @mouseenter="productHover" @mouseleave="productOut">
                         <div class="top-icon">
                             <div class="circle-img">
-                                <img src="../assets/images/find-station.png" alt="">
+                                <img class="is-hover" src="../assets/images/find-station.png" alt="">
+                                <img class="out-hover" src="../assets/images/find-station-opcity.png" alt="" style="display:none;">
                             </div>
                         </div>
                         <h3>找油气站</h3>
@@ -45,7 +46,8 @@
                     <div class="item" @mouseenter="productHover" @mouseleave="productOut">
                         <div class="top-icon">
                             <div class="circle-img">
-                                <img src="../assets/images/compare.png" alt="">
+                                <img class="is-hover" src="../assets/images/compare.png" alt="">
+                                <img class="out-hover" src="../assets/images/compare-opcity.png" alt="" style="display:none;">
                             </div>
                         </div>
                         <h3>智能比价</h3>
@@ -54,7 +56,8 @@
                     <div class="item" @mouseenter="productHover" @mouseleave="productOut">
                         <div class="top-icon">
                             <div class="circle-img">
-                                <img src="../assets/images/price.png" alt="">
+                                <img class="is-hover" src="../assets/images/price.png" alt="">
+                                <img class="out-hover" src="../assets/images/price-opcity.png" alt="" style="display:none;">
                             </div>
                         </div>
                         <h3>知路价</h3>
@@ -65,7 +68,8 @@
                     <div class="item" @mouseenter="productHover" @mouseleave="productOut">
                         <div class="top-icon">
                             <div class="circle-img">
-                                <img src="../assets/images/route-planning.png" alt="">
+                                <img class="is-hover" src="../assets/images/route-planning.png" alt="">
+                                <img class="out-hover" src="../assets/images/route-planning-opcity.png" alt="" style="display:none;">
                             </div>
                         </div>
                         <h3>路线规划</h3>
@@ -74,7 +78,8 @@
                     <div class="item" @mouseenter="productHover" @mouseleave="productOut">
                         <div class="top-icon">
                             <div class="circle-img">
-                                <img src="../assets/images/chat.png" alt="">
+                                <img class="is-hover" src="../assets/images/chat.png" alt="">
+                                <img class="out-hover" src="../assets/images/chat-opcity.png" alt="" style="display:none;">
                             </div>
                         </div>
                         <h3>互动</h3>
@@ -83,7 +88,8 @@
                     <div class="item" @mouseenter="productHover" @mouseleave="productOut">
                         <div class="top-icon">
                             <div class="circle-img">
-                                <img src="../assets/images/find.png" alt="">
+                                <img class="is-hover" src="../assets/images/find.png" alt="">
+                                <img class="out-hover" src="../assets/images/find-opcity.png" alt="" style="display:none;">
                             </div>
                         </div>
                         <h3>发现</h3>
@@ -95,7 +101,7 @@
     </div>
 </template>
 <script>
-import Download  from "../components/download.vue";
+import Download from "../components/download.vue";
 
 import "../assets/lib/swiper-3.4.1.min.css";
 import "../assets/lib/swiper-3.4.1.jquery.min.js";
@@ -126,8 +132,6 @@ export default {
         productHover(e) {
             let ele = e.target;
             let circleImage = ele.getElementsByTagName('img')[0]
-            let imgSrc = circleImage.src.split('?')[0];
-            let finalySrc = imgSrc.substr(0, imgSrc.length - 4) + '-opcity.png';
 
             ele.style.border = hoverCss.border;
             ele.style.color = hoverCss.color;
@@ -135,13 +139,12 @@ export default {
             ele.getElementsByClassName('circle-img')[0].style.backgroundColor = '#0288d1';
             ele.getElementsByTagName('h3')[0].style.color = '#0288d1'
             ele.getElementsByTagName('p')[0].style.color = '#0288d1'
-            circleImage.src = finalySrc;
+            ele.getElementsByClassName('is-hover')[0].style.display = "none";
+            ele.getElementsByClassName('out-hover')[0].style.display = "block";
         },
         productOut(e) {
             let ele = e.target;
             let circleImage = ele.getElementsByTagName('img')[0]
-            let imgSrc = circleImage.src.split('?')[0];
-            let finalySrc = imgSrc.substr(0, imgSrc.length - 4) + '-opcity.png';
 
             ele.style.border = outHoverCss.border;
             ele.style.color = outHoverCss.color;
@@ -149,7 +152,8 @@ export default {
             ele.getElementsByClassName('circle-img')[0].style.backgroundColor = '#f8f8f8';
             ele.getElementsByTagName('h3')[0].style.color = '#333333'
             ele.getElementsByTagName('p')[0].style.color = '#333333'
-            circleImage.src = finalySrc;
+            ele.getElementsByClassName('is-hover')[0].style.display = "block";
+            ele.getElementsByClassName('out-hover')[0].style.display = "none";
         }
     },
     components: {
@@ -296,11 +300,13 @@ export default {
             width: 131px;
             height: 131px;
             background-color: #f8f8f8;
-        }
-        img {
-            width: 78px;
-            height: 78px;
-            margin-top: ((131-78) / 2)+px;
+            overflow: hidden;
+            .is-hover,
+            .out-hover {
+                width: 78px;
+                height: 78px;
+                margin: (131 - 78)/2+px auto 0;
+            }
         }
     }
     h3,
