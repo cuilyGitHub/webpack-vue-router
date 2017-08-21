@@ -15,7 +15,7 @@
         <div class="dowload-right">
             <span>扫描二维码立即下载</span>
             <div class="code-img">
-                <img src="/images/zhilu-qr-code.png" alt="">
+                <img src="../assets/images/zhilu-qr-code.png" alt="">
             </div>
             <b>知路 安卓/苹果版</b>
         </div>

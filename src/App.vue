@@ -7,9 +7,6 @@
 </template>
 
 <script>
-import './assets/lib/reset.css';
-import './assets/lib/animate.css';
-
 import NavComponent from './components/nav.vue';
 import FooterComponent from './components/footer.vue'
 
@@ -28,13 +25,14 @@ export default {
     FooterComponent
   },
   created() {
-    
   }
 }
 </script>
 
 <style lang="scss">
 @import './assets/scss/common.scss';
+@import './assets/lib/reset.css';
+@import './assets/lib/animate.css';
 * {
   margin: 0;
   padding: 0;

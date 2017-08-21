@@ -56,7 +56,14 @@ module.exports = {
     performance: {
         hints: false
     },
-    devtool: '#inline-source-map'
+    devtool: '#inline-source-map',
+    plugins: [
+        new webpack.ProvidePlugin({
+            $: 'jquery',
+            'jQuery': 'jquery',
+            'window.jQuery': 'jquery',
+        })
+    ]
 }
 
 if (process.env.NODE_ENV === 'production') {

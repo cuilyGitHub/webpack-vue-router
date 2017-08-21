@@ -14,7 +14,7 @@
                     <div>支付方式</div>
                 </div>
                 <div class="form-right">
-                    <input type="tel" class="card-num" maxlength="16" @keydown="telKeyUp" v-model="telValue">
+                    <input type="tel" class="card-num" maxlength="16" @keydown="telKeyUp" v-model="telValue" placeholder="请输入油气卡号码">
                     <div class="money-clume">
                         <span @click="clickSpan" class="is-click">5000</span>
                         <span @click="clickSpan">2000</span>

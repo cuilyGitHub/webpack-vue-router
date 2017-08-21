@@ -9,21 +9,7 @@
                     <img src="../assets/images/reliable.png" alt="">
                 </h3>
                 <download></download>
-                <div class="phone-swiper" id="phone-swiper">
-                    <div class="swiper-container">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide swiper-no-swiping">
-                                <img src="../assets/images/zl_home.png" alt="">
-                            </div>
-                            <div class="swiper-slide swiper-no-swiping">
-                                <img src="../assets/images/roter-result.png" alt="">
-                            </div>
-                            <div class="swiper-slide swiper-no-swiping">
-                                <img src="../assets/images/mine.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <phone-swiper></phone-swiper>
             </div>
         </div>
         <div class="home-main-product">
@@ -102,7 +88,7 @@
 </template>
 <script>
 import Download from "../components/download.vue";
-
+import PhoneSwiper from '../components/phone.vue'
 let hoverCss = {
     "border": "2px solid #f8f8f8",
     "color": "#0288d1"
@@ -111,6 +97,7 @@ let outHoverCss = {
     "border": "none",
     "color": "#333333"
 };
+
 export default {
     name: 'home',
     data() {
@@ -147,13 +134,13 @@ export default {
         }
     },
     components: {
-        Download
+        Download,
+        PhoneSwiper
     },
 }
 </script>
 <style lang="scss">
 @import "../assets/scss/common.scss";
-
 .banner {
     @include area($w, 832px);
     @include background('../assets/images/banner_9-min.png');
@@ -181,14 +168,7 @@ export default {
             width: 308+20+130+16+px;
             height: 86+12+86+px;
         }
-        .phone-swiper {
-            background: url("../assets/images/phone.png") no-repeat left;
-            width: 431px;
-            height: 762px;
-            position: absolute;
-            right: 0;
-            margin-top: 50px;
-        }
+
     }
 }
 
