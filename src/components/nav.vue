@@ -8,20 +8,8 @@
             </div>
             <div class="head-middle-right">
                 <ul class="navgater">
-                    <li>
-                        <router-link to="home" >产品介绍</router-link>
-                    </li>
-                    <li>
-                        <router-link to="payment" >注册会员</router-link>
-                    </li>
-                    <li>
-                        <router-link to="inforcenter" >资讯中心</router-link>
-                    </li>
-                    <li>
-                        <router-link to="paycard" >油气卡充值</router-link>
-                    </li>
-                    <li>
-                        <router-link to="about" >关于我们</router-link>
+                    <li v-for="i in linkConf">
+                        <router-link :to="i.path" >{{i.word}}</router-link>
                     </li>
                 </ul>
             </div>
@@ -29,13 +17,26 @@
     </div>
 </template>
 <script>
-import $ from "jquery";
-
 export default {
     name: "nav",
     data() {
         return {
-
+            linkConf:[{
+                path:'home',
+                word:'产品介绍',
+            },{
+                path:'payment',
+                word:'注册会员',
+            },{
+                path:'inforcenter',
+                word:'资讯中心',
+            },{
+                path:'paycard',
+                word:'油气卡充值',
+            },{
+                path:'about',
+                word:'关于我们',
+            }]
         }
     },
     methods: {

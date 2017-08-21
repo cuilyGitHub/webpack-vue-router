@@ -7,6 +7,8 @@ import "./assets/lib/jquery.nicescroll.min.js"
 import './assets/lib/pace.css'
 import './assets/lib/pace.min.js';
 
+import $ from 'jquery'
+
 Vue.config.productionTip = false;
 
 var vm = new Vue({
