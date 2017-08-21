@@ -59,4 +59,42 @@ body {
     background-color: $f;
   }
 }
+
+a {
+    text-decoration: none;
+}
+
+table {
+    border-collapse: collapse;
+    /* 边框合并属性  */
+    // width:200px;
+}
+
+th {
+    border: 1px solid #666666;
+}
+
+td {
+    border: 1px solid #666666;
+    padding: 24px;
+}
+
+ul.bankIcon li {
+    width: 124px;
+    padding: 10px 10px;
+    float: left;
+}
+
+body,
+div,
+a,
+ul,
+li,
+h1,
+table {
+    padding: 0;
+    margin: 0;
+    font-size: 12px;
+    color: #555;
+}
 </style>

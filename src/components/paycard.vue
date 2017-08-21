@@ -1,5 +1,6 @@
 <template>
     <div class="paycard-main-wrapper">
+        <title-component  this-title="气卡充值" this-transform="card pay"></title-component>
         <div class="paycard-form">
             <div class="form-top">
                 <div class="form-left">
@@ -45,7 +46,7 @@
     </div>
 </template>
 <script>
-import $ from 'jquery';
+import TitleComponent from '../components/title.vue'
 
 export default {
     name: 'parcard',
@@ -56,6 +57,9 @@ export default {
             blueSrc: "",
             focusSrc: ''
         }
+    },
+    components:{
+        TitleComponent
     },
     methods: {
         weiChatPay(e) {
@@ -98,13 +102,14 @@ export default {
 .paycard-main-wrapper {
     background-color: #fbfbfb;
     width: $w;
-    height: 533+82px;
-    padding-top: 82px;
+    //height: 533+82px;
+    padding-top: 48px;
     .paycard-form {
         @include area(628px, 533px);
         margin: 0 auto;
         font-size: 18px;
         color: #666666;
+        margin-top: 48px;
         .form-top {
             overflow: hidden;
 

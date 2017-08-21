@@ -47,6 +47,7 @@ export default {
     right: 0;
     margin-top: 50px;
 }
+.swiper-container{margin-left: 0;}
 </style>
 
 
