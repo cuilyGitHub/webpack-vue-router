@@ -36,6 +36,7 @@ export default {
 @import './assets/scss/common.scss';
 @import './assets/lib/reset.css';
 @import './assets/lib/animate.css';
+
 * {
   margin: 0;
   padding: 0;
