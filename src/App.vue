@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <progress-bar></progress-bar>
     <nav-component></nav-component>
     <router-view></router-view>
     <footer-component></footer-component>
@@ -9,6 +10,7 @@
 <script>
 import NavComponent from './components/nav.vue';
 import FooterComponent from './components/footer.vue'
+import progressBar from './components/progress-bar.vue'
 
 export default {
   name: 'app',
@@ -22,7 +24,8 @@ export default {
   },
   components: {
     NavComponent,
-    FooterComponent
+    FooterComponent,
+    progressBar
   },
   created() {
   }
